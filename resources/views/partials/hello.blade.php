@@ -16,6 +16,14 @@
         {{ __('PAYBE') }}
     </p>
 
+    <p>
+        Hello world <br>
+        Maybe
+    </p>
+
+    <p>
+        hello@gmail.com
+    </p>
 
 </body>
 
