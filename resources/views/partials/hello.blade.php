@@ -25,6 +25,11 @@
         hello@gmail.com
     </p>
 
+    <p>
+        {{ __('Hello worldHOWAREYOU') }}
+    </p>
+
+
 </body>
 
 </html>
