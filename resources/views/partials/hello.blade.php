@@ -36,6 +36,16 @@
         {{ __('Hello worldHOWAREYOU') }}
     </p>
 
+    <p>
+        testing the other thing and FOR FUCK SAKE WORK
+    </p>
+
+
+    <p>
+        PLEASE
+    </p>
+
+
 
 </body>
 
