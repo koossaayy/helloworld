@@ -37,12 +37,12 @@
     </p>
 
     <p>
-        testing the other thing and FOR FUCK SAKE WORK
+        {{ __('testing the other thing and FOR FUCK SAKE WORK') }}
     </p>
 
 
     <p>
-        PLEASE
+        {{ __('PLEASE') }}
     </p>
 
 
