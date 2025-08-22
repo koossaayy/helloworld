@@ -17,14 +17,14 @@
     </p>
 
     <p>
-        Hello world <br>
-        Maybe
+        {{ __('Hello world') }} <br>
+        {{ __('Maybe') }}
     </p>
 
 
     <p>
-        You should <br>
-        wWork
+        {{ __('You should') }} <br>
+        {{ __('wWork') }}
     </p>
 
 
