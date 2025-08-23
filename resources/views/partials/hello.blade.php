@@ -59,11 +59,11 @@
         {{ __('This is coming from another PR') }}
     </p>
     <p>
-        Hopefully this will update everything ine Realtime
+        {{ __('Hopefully this will update everything ine Realtime') }}
     </p>
 
     <p>
-        It didn't work but let's check with Claude
+        {{ __("It didn't work but let's check with Claude") }}
     </p>
 
 
