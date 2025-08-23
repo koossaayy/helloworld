@@ -37,26 +37,26 @@
     </p>
 
     <p>
-        testing the other thing and FOR FUCK SAKE WORK
+        {{ __('testing the other thing and FOR FUCK SAKE WORK') }}
     </p>
 
 
     <p>
-        PLEASE
+        {{ __('PLEASE') }}
     </p>
 
 
     <p>
-        Now it should work for both of them
+        {{ __('Now it should work for both of them') }}
     </p>
 
     <p>
-        LETS GOOOOOOOOOO
+        {{ __('LETS GOOOOOOOOOO') }}
     </p>
 
 
     <p>
-        This is coming from another PR
+        {{ __('This is coming from another PR') }}
     </p>
 
 
