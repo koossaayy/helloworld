@@ -68,7 +68,7 @@
 
 
     <p>
-        HELLOOOOOOOO WORLSD
+        {{ __('HELLOOOOOOOO WORLSD') }}
     </p>
 
 
