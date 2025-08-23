@@ -58,6 +58,9 @@
     <p>
         {{ __('This is coming from another PR') }}
     </p>
+    <p>
+        Hopefully this will update everything ine Realtime
+    </p>
 
 
 
