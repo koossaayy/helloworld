@@ -73,7 +73,7 @@
 
 
     <p>
-        DAVAI BLYAT
+        {{ __('DAVAI BLYAT') }}
     </p>
 
 
