@@ -79,7 +79,7 @@
 
 
     <p>
-        testing the extractior I'm gonna play with"me
+        {{ __("testing the extractior I'm gonna play with\"me") }}
     </p>
 
 
