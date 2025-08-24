@@ -84,21 +84,21 @@
 
 
     <p>
-        testing the new stuff and please write a good commit message , later on try to merge a pr ?
+        {{ __('testing the new stuff and please write a good commit message , later on try to merge a pr ?') }}
     </p>
 
     <p>
-        PLEASE WORK
+        {{ __('PLEASE WORK') }}
     </p>
 
     <p>
-        mauybe please workd testing the extractior I'm gonna play with"me
+        {{ __("mauybe please workd testing the extractior I'm gonna play with\"me") }}
     </p>
 
 
 
     <p>
-        mauybe please workd testing the extractior I'm gonna play with"me WORK
+        {{ __("mauybe please workd testing the extractior I'm gonna play with\"me WORK") }}
     </p>
 
 
