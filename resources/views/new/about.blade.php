@@ -20,11 +20,13 @@
                     <ul class="text-slate-600 dark:text-dark-400">
                         @if ($env !== 'production')
                             <li>{{ __('The environment was expected to be') }} <span
-                                    class="env_value env_value_expected">{{ __('production') }}</span>{{ __(', but actually was') }} <span
-                                    class="env_value env_value_actual">{{ $env }}</span>.</li>
+                                    class="env_value env_value_expected">{{ __('production') }}</span>{{ __(', but actually was') }}
+                                <span class="env_value env_value_actual">{{ $env }}</span>.</li>
                         @endif
                         @if ($debug === true)
-                            <li>{{ __('The debug mode was expected to be') }} <span class="env_value env_value_expected">{{ __('false') }}</span>{{ __(', but actually was') }} <span class="env_value env_value_actual">{{ __('true') }}</span>.</li>
+                            <li>{{ __('The debug mode was expected to be') }} <span
+                                    class="env_value env_value_expected">{{ __('false') }}</span>{{ __(', but actually was') }}
+                                <span class="env_value env_value_actual">{{ __('true') }}</span>.</li>
                         @endif
                     </ul>
                 </div>
@@ -50,7 +52,8 @@
                 <div class="card card-master shadow-xs p-4">
                     <p class="text-[#ff2d20] text-sm font-medium leading-4">{{ __('Laravel') }}</p>
                     <p class="text-2xl font-bold text-slate-700 dark:text-dark-300">
-                        <a href="https://github.com/laravel/framework/releases/tag/v{{ app()->version() }}" target="_blank">
+                        <a href="https://github.com/laravel/framework/releases/tag/v{{ app()->version() }}"
+                            target="_blank">
                             {{ app()->version() }}
                         </a>
                     </p>
@@ -67,7 +70,7 @@
         <div class="config content-container card card-master">
             <h1 class="text-2xl">
                 {{ __('Configuration') }}
-                <p class="font-light text-sm float-right"><span class="text-gray-500/85">{{ __('.\config') }}</span>\urlhub.php</p>
+                <p class="font-light text-sm float-right"><span class="text-gray-500/85">.\config</span>\urlhub.php</p>
             </h1>
 
             <h3 class="text-xl">{{ __('Shortened Links') }}</h3>
@@ -116,7 +119,8 @@
 
                 <dt class="mt-2">
                     <code>{{ __('blacklist_domain') }}</code>
-                    <p class="font-light text-sm dark:text-dark-400">{{ __('This is a list of domain names that are not allowed to be shortened.') }}</p>
+                    <p class="font-light text-sm dark:text-dark-400">
+                        {{ __('This is a list of domain names that are not allowed to be shortened.') }}</p>
                 </dt>
                 <dd class="mt-2">
                     <div class="card bg-gray-50! dark:bg-dark-950/50! rounded! px-3 py-2 text-sm">
