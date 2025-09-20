@@ -70,7 +70,7 @@
         <div class="config content-container card card-master">
             <h1 class="text-2xl">
                 {{ __('Configuration') }}
-                <p class="font-light text-sm float-right"><span class="text-gray-500/85">.\config</span>\urlhub.php</p>
+                <p class="font-light text-sm float-right"><span class="text-gray-500/85">{{ __('.\config') }}</span>\urlhub.php</p>
             </h1>
 
             <h3 class="text-xl">{{ __('Shortened Links') }}</h3>
