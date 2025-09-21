@@ -19,7 +19,8 @@
                 <div class="box-header with-border">
                     <h3 class="box-title">{{ __('Host List') }}</h3>
                     <div class="box-tools">
-                        <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#newHostModal">{{ __('Create New') }}</button>
+                        <button class="btn btn-sm btn-primary" data-toggle="modal"
+                            data-target="#newHostModal">{{ __('Create New') }}</button>
                     </div>
                 </div>
                 <div class="box-body table-responsive no-padding">
@@ -72,25 +73,34 @@
                         <div class="form-group">
                             <label for="pName" class="form-label">{{ __('Name') }}</label>
                             <input type="text" name="name" id="pName" class="form-control" />
-                            <p class="text-muted small">{{ __('A short identifier used to distinguish this location from others. Must be between 1 and 60 characters, for example,') }} <code>us.nyc.lvl3</code>.</p>
+                            <p class="text-muted small">
+                                {{ __('A short identifier used to distinguish this location from others. Must be between 1 and 60 characters, for example,') }}
+                                <code>us.nyc.lvl3</code>.
+                            </p>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
                                 <label for="pHost" class="form-label">{{ __('Host') }}</label>
                                 <input type="text" name="host" id="pHost" class="form-control" />
-                                <p class="text-muted small">{{ __('The IP address or FQDN that should be used when attempting to connect to this MySQL host') }} <em>{{ __('from the panel') }}</em> {{ __('to add new databases.') }}</p>
+                                <p class="text-muted small">
+                                    {{ __('The IP address or FQDN that should be used when attempting to connect to this MySQL host') }}
+                                    <em>{{ __('from the panel') }}</em> {{ __('to add new databases.') }}
+                                </p>
                             </div>
                             <div class="col-md-6">
                                 <label for="pPort" class="form-label">{{ __('Port') }}</label>
                                 <input type="text" name="port" id="pPort" class="form-control" value="3306" />
-                                <p class="text-muted small">{{ __('The port that MySQL is running on for this host.') }}</p>
+                                <p class="text-muted small">{{ __('The port that MySQL is running on for this host.') }}
+                                </p>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
                                 <label for="pUsername" class="form-label">{{ __('Username') }}</label>
                                 <input type="text" name="username" id="pUsername" class="form-control" />
-                                <p class="text-muted small">{{ __('The username of an account that has enough permissions to create new users and databases on the system.') }}</p>
+                                <p class="text-muted small">
+                                    {{ __('The username of an account that has enough permissions to create new users and databases on the system.') }}
+                                </p>
                             </div>
                             <div class="col-md-6">
                                 <label for="pPassword" class="form-label">{{ __('Password') }}</label>
@@ -110,15 +120,22 @@
                                     </optgroup>
                                 @endforeach
                             </select>
-                            <p class="text-muted small">{{ __('This setting does nothing other than default to this database host when adding a database to a server on the selected node.') }}</p>
+                            <p class="text-muted small">
+                                {{ __('This setting does nothing other than default to this database host when adding a database to a server on the selected node.') }}
+                            </p>
                         </div>
                     </div>
                     <div class="modal-footer">
                         <p class="text-danger small text-left">{{ __('The account defined for this database host') }}
-                            <strong>{{ __('must') }}</strong> {{ __('have the') }} <code>{{ __('WITH GRANT OPTION') }}</code> {{ __('permission. If the defined account does not have this permission requests to create databases') }} <em>{{ __('will') }}</em> {{ __('fail.') }} <strong>{{ __('Do not use the same account details for MySQL that you have defined for this panel.') }}</strong>
+                            <strong>{{ __('must') }}</strong> {{ __('have the') }}
+                            <code>{{ __('WITH GRANT OPTION') }}</code>
+                            {{ __('permission. If the defined account does not have this permission requests to create databases') }}
+                            <em>{{ __('will') }}</em> {{ __('fail.') }}
+                            <strong>{{ __('Do not use the same account details for MySQL that you have defined for this panel.') }}</strong>
                         </p>
                         {!! csrf_field() !!}
-                        <button type="button" class="btn btn-default btn-sm pull-left" data-dismiss="modal">{{ __('Cancel') }}</button>
+                        <button type="button" class="btn btn-default btn-sm pull-left"
+                            data-dismiss="modal">{{ __('Cancel') }}</button>
                         <button type="submit" class="btn btn-success btn-sm">{{ __('Create') }}</button>
                     </div>
                 </form>
@@ -127,6 +144,13 @@
     </div>
     <div>
         {{ __('Hello world BABY') }}
+    </div>
+    <div>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+        aliqua.
+    </div>
+    <div>
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     </div>
 @endsection
 
