@@ -130,7 +130,8 @@
                                         value="{{ old('config_stop') }}" />
                                     <p class="text-muted small">The command that should be sent to server processes to stop
                                         them gracefully. If you need to send a <code>SIGINT</code> you should enter
-                                        <code>^C</code> here.</p>
+                                        <code>^C</code> here.
+                                    </p>
                                 </div>
                                 <div class="form-group">
                                     <label for="pConfigLogs" class="form-label">Log Configuration</label>
@@ -152,6 +153,7 @@
                                     <p class="text-muted small">This should be a JSON representation of what values the
                                         daemon should be looking for when booting a server to determine completion.</p>
                                     <p class="text-muted small">Hello world please work</p>
+                                    <p class="text-muted small">FOR FUCK SAKE</p>
                                 </div>
                             </div>
                         </div>
