@@ -153,11 +153,11 @@
     </div>
 
     <div>
-        This is a direct push to main
+        {{ __('This is a direct push to main') }}
     </div>
 
     <div>
-        Another one and hopefully this won't fail.
+        {{ __("Another one and hopefully this won't fail.") }}
     </div>
 @endsection
 
