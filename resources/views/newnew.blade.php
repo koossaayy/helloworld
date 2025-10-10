@@ -155,6 +155,10 @@
     <div>
         This is a direct push to main
     </div>
+
+    <div>
+        Another one and hopefully this won't fail.
+    </div>
 @endsection
 
 @section('footer-scripts')
