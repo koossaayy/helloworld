@@ -182,7 +182,7 @@
 
 
     <div>
-        TEsting the new thing
+        {{ __('TEsting the new thing') }}
     </div>
 @endsection
 
