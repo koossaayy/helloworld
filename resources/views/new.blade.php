@@ -168,6 +168,10 @@
             </div>
         </div>
     </form>
+
+    <div>
+        Lorem ipsum dolor hello world
+    </div>
 @endsection
 
 @section('footer-scripts')
