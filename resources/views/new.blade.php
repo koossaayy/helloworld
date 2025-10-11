@@ -179,6 +179,11 @@
     <div>
         {{ __('and another one') }}
     </div>
+
+
+    <div>
+        TEsting the new thing
+    </div>
 @endsection
 
 @section('footer-scripts')
