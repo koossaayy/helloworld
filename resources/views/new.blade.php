@@ -170,14 +170,14 @@
     </form>
 
     <div>
-        Lorem ipsum dolor hello world
+        {{ __('Lorem ipsum dolor hello world') }}
     </div>
     <div>
-        again another lorem ipsum dolor
+        {{ __('again another lorem ipsum dolor') }}
     </div>
 
     <div>
-        and another one
+        {{ __('and another one') }}
     </div>
 @endsection
 
