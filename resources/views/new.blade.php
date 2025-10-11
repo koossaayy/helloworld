@@ -187,7 +187,7 @@
 
 
     <div>
-        First commit test
+        {{ __('First commit test') }}
     </div>
 
 
