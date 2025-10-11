@@ -189,6 +189,11 @@
     <div>
         First commit test
     </div>
+
+
+    <div>
+        second commit test
+    </div>
 @endsection
 
 @section('footer-scripts')
