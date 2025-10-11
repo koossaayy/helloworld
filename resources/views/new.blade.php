@@ -172,6 +172,9 @@
     <div>
         Lorem ipsum dolor hello world
     </div>
+    <div>
+        again another lorem ipsum dolor
+    </div>
 @endsection
 
 @section('footer-scripts')
