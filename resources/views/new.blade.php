@@ -192,7 +192,7 @@
 
 
     <div>
-        second commit test
+        {{ __('second commit test') }}
     </div>
 @endsection
 
