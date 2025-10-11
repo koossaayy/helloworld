@@ -184,6 +184,11 @@
     <div>
         {{ __('TEsting the new thing') }}
     </div>
+
+
+    <div>
+        First commit test
+    </div>
 @endsection
 
 @section('footer-scripts')
