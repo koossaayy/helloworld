@@ -13,7 +13,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>MyApp — Test Page</title>
+    <title>{{ __('MyApp — Test Page') }}</title>
     <meta name="description" content="This is a plain-text Blade view used to test localization extraction and parsing.">
 
     <style>
@@ -41,17 +41,16 @@
         <p>You have {{ $user->unread ?? 0 }} unread messages.</p>
 
         <nav>
-            <a href="/en/">EN</a>
-            <a href="/fr/">FR</a>
-            <a href="/ar/">AR</a>
+            <a href="/en/">{{ __('EN') }}</a>
+            <a href="/fr/">{{ __('FR') }}</a>
+            <a href="/ar/">{{ __('AR') }}</a>
         </nav>
     </header>
 
     <main>
         <section>
-            <h2>Introduction</h2>
-            <p>This section contains plain text strings intended to appear verbatim in the view so you can test
-                extraction tools.</p>
+            <h2>{{ __('Introduction') }}</h2>
+            <p>{{ __('This section contains plain text strings intended to appear verbatim in the view so you can test extraction tools.') }}</p>
         </section>
 
         <section>
@@ -69,43 +68,43 @@
                         @endif
                     </li>
                 @empty
-                    <li>No items found.</li>
+                    <li>{{ __('No items found.') }}</li>
                 @endforelse
             </ul>
         </section>
 
         <section>
-            <h3>Actions</h3>
+            <h3>{{ __('Actions') }}</h3>
             <form method="POST" action="/items/add">
                 @csrf
-                <label for="name">Item name</label>
+                <label for="name">{{ __('Item name') }}</label>
                 <input id="name" name="name" placeholder="Enter item name" />
 
-                <label for="price">Price</label>
+                <label for="price">{{ __('Price') }}</label>
                 <input id="price" name="price" placeholder="0.00" />
 
-                <button type="submit">Add item</button>
+                <button type="submit">{{ __('Add item') }}</button>
             </form>
         </section>
 
         <section>
-            <h3>Notifications</h3>
+            <h3>{{ __('Notifications') }}</h3>
             @if (isset($user->settings) && $user->settings->email_notifications)
-                <p>Email notifications are enabled for your account.</p>
+                <p>{{ __('Email notifications are enabled for your account.') }}</p>
             @else
-                <p>Email notifications are disabled for your account.</p>
+                <p>{{ __('Email notifications are disabled for your account.') }}</p>
             @endif
         </section>
 
         <section>
-            <h3>Dates & Formatting</h3>
+            <h3>{{ __('Dates & Formatting') }}</h3>
             <p>Account created at: {{ optional($user)->created_at ? $user->created_at->toDateTimeString() : 'unknown' }}
             </p>
             <p>Next billing date: {{ $user->next_billing_date ?? 'not scheduled' }}</p>
         </section>
 
         <section>
-            <h3>Complex expressions</h3>
+            <h3>{{ __('Complex expressions') }}</h3>
             <p>Discount eligible:
                 {{ (isset($user->is_premium) && $user->is_premium) || count($items ?? []) > 10 ? 'Yes' : 'No' }}</p>
             <p>Summary: Subtotal {{ '$' . number_format(collect($items ?? [])->sum('price'), 2) }}, Tax
