@@ -50,7 +50,8 @@
     <main>
         <section>
             <h2>{{ __('Introduction') }}</h2>
-            <p>{{ __('This section contains plain text strings intended to appear verbatim in the view so you can test extraction tools.') }}</p>
+            <p>{{ __('This section contains plain text strings intended to appear verbatim in the view so you can test extraction tools.') }}
+            </p>
         </section>
 
         <section>
@@ -98,7 +99,8 @@
 
         <section>
             <h3>{{ __('Dates & Formatting') }}</h3>
-            <p>Account created at: {{ optional($user)->created_at ? $user->created_at->toDateTimeString() : 'unknown' }}
+            <p>Account created at:
+                {{ optional($user)->created_at ? $user->created_at->toDateTimeString() : 'unknown' }}
             </p>
             <p>Next billing date: {{ $user->next_billing_date ?? 'not scheduled' }}</p>
         </section>
@@ -111,6 +113,11 @@
                 {{ '$' .number_format(collect($items ?? [])->sum(function ($i) {return ($i['price'] ?? 0) * 0.2;}),2) }}
             </p>
         </section>
+
+        <footer>
+            <p>Contact support at support@example.com or visit our help center.</p>
+            <p>© {{ date('Y') }} MyApp. All rights reserved.</p>
+        </footer>
 
         <footer>
             <p>Contact support at support@example.com or visit our help center.</p>
