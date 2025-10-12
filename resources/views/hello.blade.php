@@ -123,6 +123,11 @@
             <p>Contact support at support@example.com or visit our help center.</p>
             <p>© {{ date('Y') }} MyApp. All rights reserved.</p>
         </footer>
+
+        <footer>
+            <p>Another one PLEASE WORK</p>
+            <p>© {{ date('Y') }} MyApp. All rights reserved.</p>
+        </footer>
     </main>
 
 </body>
