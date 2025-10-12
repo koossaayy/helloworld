@@ -189,11 +189,6 @@
     <div>
         {{ __('First commit test') }}
     </div>
-
-
-    <div>
-        {{ __('second commit test') }}
-    </div>
 @endsection
 
 @section('footer-scripts')
