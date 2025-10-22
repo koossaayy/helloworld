@@ -1,135 +1,110 @@
-@php
-    /**
-     * localized_test.blade.php
-     * Complex Blade view (PLAIN TEXT strings) to stress-test localization parsing.
-     * Expected variables: $user (object with name, email), $items (collection/array), $count (int)
-     */
-@endphp
+{{-- Raw Text Stress Test — No nested directives --}}
+@extends('layouts.base')
 
-<!doctype html>
-<html lang="en" dir="ltr">
+@section('title', 'Raw Content Localization Test')
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@section('content')
+    <!-- Simple heading -->
+    <h1>{{ __('Welcome to the platform') }}</h1>
 
-    <title>{{ __('MyApp — Test Page') }}</title>
-    <meta name="description" content="This is a plain-text Blade view used to test localization extraction and parsing.">
+    <!-- Mixed text with Blade echo -->
+    <p>{{ __('Hello,') }} {{ $user->name }}{{ __('! You have') }} <strong>{{ __('3 unread messages') }}</strong>.</p>
 
-    <style>
-        body {
-            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-        }
+    <!-- Text with quotes and apostrophes -->
+    <p>{{ __('She said: “Don’t touch that button!” — but he clicked it anyway.') }}</p>
+    <p>{{ __('L’année dernière, nous avons lancé l’application.') }}</p>
+    <p>{{ __("He replied: 'It\'s working… maybe?'") }}</p>
 
-        .rtl {
-            text-align: right;
-        }
+    <!-- Punctuation-heavy -->
+    <p>{{ __('Wait—what?! 😲 Did you really just do that… again??') }}</p>
+    <p>Price: $19.99 (€18,50) — 100% money-back guarantee!</p>
 
-        .badge {
-            display: inline-block;
-            padding: 4px 8px;
-            border-radius: 6px;
-            background: #efefef
-        }
-    </style>
-</head>
+    <!-- Numbers & units (should NOT be extracted) -->
+    <ul>
+        <li>{{ __('File size: 2.4 MB') }}</li>
+        <li>{{ __('Version: 3.14.159') }}</li>
+        <li>{{ __('ID: 9876543210') }}</li>
+        <li>{{ __('Coordinates: 40.7128° N, 74.0060° W') }}</li>
+        <li>{{ __('Discount: 25%') }}</li>
+        <li>{{ __('Temperature: -5°C to 32°F') }}</li>
+    </ul>
 
-<body>
+    <!-- URLs, emails, paths (should NOT be extracted) -->
+    <p>{{ __('Contact us at support@example.com or visit https://help.example.com/v2/docs') }}</p>
+    <p>{{ __('Config path: /etc/app/config.yaml') }}</p>
+    <p>{{ __('Windows path: C:\Users\John\AppData\Local\MyApp') }}</p>
+    <p>{{ __('API token: sk_live_a1b2c3d4e5f6g7h8i9j0') }}</p>
+    <p>{{ __('Session UUID: f47ac10b-58cc-4372-a567-0e02b2c3d479') }}</p>
 
-    <header>
-        <h1>Welcome, {{ $user->name ?? 'Guest' }}!</h1>
-        <p>You have {{ $user->unread ?? 0 }} unread messages.</p>
+    <!-- Placeholders that look like text but aren’t -->
+    <p>User: {username}</p>
+    <p>{{ __('Log: [ERROR] Failed to load module') }}</p>
+    <p>Code: return $value ?? 'default';</p>
 
-        <nav>
-            <a href="/en/">{{ __('EN') }}</a>
-            <a href="/fr/">{{ __('FR') }}</a>
-            <a href="/ar/">{{ __('AR') }}</a>
-        </nav>
-    </header>
+    <!-- HTML entities and symbols -->
+    <p>Copyright &copy; 2025 Acme Inc. &reg; All rights reserved.</p>
+    <p>{{ __('Math: 2') }} < 5 &amp;&amp; 10>= 7</p>
 
-    <main>
-        <section>
-            <h2>{{ __('Introduction') }}</h2>
-            <p>{{ __('This section contains plain text strings intended to appear verbatim in the view so you can test extraction tools.') }}
-            </p>
-        </section>
+    <!-- Translatable text with HTML inside -->
+    <p>{!! __('Click <a href=":url">{{ __('here') }}</a> to continue', ['url' => route('next')]) !!}</p>
 
-        <section>
-            <h3>Items ({{ count($items ?? []) }})</h3>
-            <p>There are {{ count($items ?? []) }} items in your list.</p>
+    <!-- Existing translations — must remain untouched -->
+    <p>{{ __('You have :count notifications', ['count' => 5]) }}</p>
+    <p>@lang('Your account is active')</p>
 
-            <ul>
-                @forelse($items ?? [] as $i => $item)
-                    <li>
-                        <strong>Item {{ $i + 1 }}: {{ $item['name'] ?? 'Unknown item' }}</strong>
-                        <span> — Price: {{ $item['price'] ?? 'N/A' }}</span>
-                        <div class="badge">In stock: {{ $item['stock'] ?? 0 }}</div>
-                        @if (!empty($item['tags']))
-                            <div>Tags: {{ implode(', ', $item['tags']) }}</div>
-                        @endif
-                    </li>
-                @empty
-                    <li>{{ __('No items found.') }}</li>
-                @endforelse
-            </ul>
-        </section>
+    <!-- Text with emojis and multilingual mix -->
+    <p>{{ __('🎉 Gracias! Merci! Danke! 谢谢！شكراً!') }}</p>
+    <p>{{ __('🚀 Launching in 3… 2… 1… 🌍') }}</p>
 
-        <section>
-            <h3>{{ __('Actions') }}</h3>
-            <form method="POST" action="/items/add">
-                @csrf
-                <label for="name">{{ __('Item name') }}</label>
-                <input id="name" name="name" placeholder="Enter item name" />
+    <!-- Text adjacent to Blade without spaces -->
+    <label for="email">{{ __('Email:') }}</label><input type="email" id="email" value="{{ $user->email }}">
+    <p>{{ __('Status:') }}<span class="status">{{ $user->status_label }}</span></p>
 
-                <label for="price">{{ __('Price') }}</label>
-                <input id="price" name="price" placeholder="0.00" />
+    <!-- Whitespace-sensitive cases -->
+    <pre>
+This is a preformatted block.
+It contains:
+- Code-like lines
+-   Indented content
+- And raw strings like 'debug_mode = true'
+Do NOT extract anything from {{ __('here') }}.
+    </pre>
 
-                <button type="submit">{{ __('Add item') }}</button>
-            </form>
-        </section>
+    <!-- Attribute-like text in content (should be extracted) -->
+    <p>{{ __('The word "class" appears in this sentence — it’s just a word.') }}</p>
+    <p>{{ __('We use the term "id" frequently in documentation.') }}</p>
 
-        <section>
-            <h3>{{ __('Notifications') }}</h3>
-            @if (isset($user->settings) && $user->settings->email_notifications)
-                <p>{{ __('Email notifications are enabled for your account.') }}</p>
-            @else
-                <p>{{ __('Email notifications are disabled for your account.') }}</p>
-            @endif
-        </section>
+    <!-- False positive traps -->
+    <p>{{ __('File: .env.backup') }}</p>
+    <p>{{ __('Command: npm install --save-dev') }}</p>
+    <p>Regex: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/</p>
+    <p>JSON: {"status":"active","count":42}</p>
 
-        <section>
-            <h3>{{ __('Dates & Formatting') }}</h3>
-            <p>Account created at:
-                {{ optional($user)->created_at ? $user->created_at->toDateTimeString() : 'unknown' }}
-            </p>
-            <p>Next billing date: {{ $user->next_billing_date ?? 'not scheduled' }}</p>
-        </section>
+    <!-- Real translatable content -->
+    <button type="submit">{{ __('Save Changes') }}</button>
+    <a href="#" class="btn-{{ __('Cancel') }}">{{ __('Cancel') }}</a>
+    <p>{{ __('Are you sure you want to delete this item?') }}</p>
+    <p>{{ __('Your changes have been saved successfully.') }}</p>
 
-        <section>
-            <h3>{{ __('Complex expressions') }}</h3>
-            <p>Discount eligible:
-                {{ (isset($user->is_premium) && $user->is_premium) || count($items ?? []) > 10 ? 'Yes' : 'No' }}</p>
-            <p>Summary: Subtotal {{ '$' . number_format(collect($items ?? [])->sum('price'), 2) }}, Tax
-                {{ '$' .number_format(collect($items ?? [])->sum(function ($i) {return ($i['price'] ?? 0) * 0.2;}),2) }}
-            </p>
-        </section>
+    <!-- Edge: text that starts/ends with punctuation -->
+    <p>{{ __('“Yes!”') }}</p>
+    <p>{{ __('(Optional)') }}</p>
+    <p>{{ __('…Loading') }}</p>
+    <p>{{ __('!!! Warning !!!') }}</p>
 
-        <footer>
-            <p>Contact support at support@example.com or visit our help center.</p>
-            <p>© {{ date('Y') }} MyApp. All rights reserved.</p>
-        </footer>
+    <!-- Mixed case and spacing -->
+    <p> {{ __('This has extra spaces') }} </p>
+    <p>LINE
+        BREAKS
+        INSIDE</p>
 
-        <footer>
-            <p>Contact support at support@example.com or visit our help center.</p>
-            <p>© {{ date('Y') }} MyApp. All rights reserved.</p>
-        </footer>
+    <!-- Final sanity check -->
+    <footer>
+        <small>{{ __('© :year :company. All rights reserved.', ['year' => date('Y'), 'company' => 'GlobalSoft Ltd']) }}</small>
+    </footer>
 
-        <footer>
-            <p>Another one PLEASE WORK</p>
-            <p>© {{ date('Y') }} MyApp. All rights reserved.</p>
-        </footer>
-    </main>
+    <p>
+        Hello World how are you ?
+    </p>
 
-</body>
-
-</html>
+@endsection
