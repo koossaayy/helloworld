@@ -17,7 +17,7 @@
 
     <!-- Punctuation-heavy -->
     <p>{{ __('Wait—what?! 😲 Did you really just do that… again??') }}</p>
-    <p>Price: $19.99 (€18,50) — 100% money-back guarantee!</p>
+    <p>{{ __('Price: $19.99 (€18,50) — 100% money-back guarantee!') }}</p>
 
     <!-- Numbers & units (should NOT be extracted) -->
     <ul>
@@ -37,12 +37,12 @@
     <p>{{ __('Session UUID: f47ac10b-58cc-4372-a567-0e02b2c3d479') }}</p>
 
     <!-- Placeholders that look like text but aren’t -->
-    <p>User: {username}</p>
+    <p>{{ __('User: {username}') }}</p>
     <p>{{ __('Log: [ERROR] Failed to load module') }}</p>
-    <p>Code: return $value ?? 'default';</p>
+    <p>{{ __("Code: return $value ?? 'default';") }}</p>
 
     <!-- HTML entities and symbols -->
-    <p>Copyright &copy; 2025 Acme Inc. &reg; All rights reserved.</p>
+    <p>{{ __('Copyright &copy; 2025 Acme Inc. &reg; All rights reserved.') }}</p>
     <p>{{ __('Math: 2') }} < 5 &amp;&amp; 10>= 7</p>
 
     <!-- Translatable text with HTML inside -->
@@ -77,8 +77,8 @@ Do NOT extract anything from {{ __('here') }}.
     <!-- False positive traps -->
     <p>{{ __('File: .env.backup') }}</p>
     <p>{{ __('Command: npm install --save-dev') }}</p>
-    <p>Regex: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/</p>
-    <p>JSON: {"status":"active","count":42}</p>
+    <p>@Regex: /^[a-z0-9._%+-]+[a-z0-9.-]+\.[a-z]{2,}$/</p>
+    <p>{{ __('JSON: {"status":"active","count":42}') }}</p>
 
     <!-- Real translatable content -->
     <button type="submit">{{ __('Save Changes') }}</button>
@@ -94,17 +94,13 @@ Do NOT extract anything from {{ __('here') }}.
 
     <!-- Mixed case and spacing -->
     <p> {{ __('This has extra spaces') }} </p>
-    <p>LINE
-        BREAKS
-        INSIDE</p>
+    <p>{{ __('LINE BREAKS INSIDE') }}</p>
 
     <!-- Final sanity check -->
     <footer>
         <small>{{ __('© :year :company. All rights reserved.', ['year' => date('Y'), 'company' => 'GlobalSoft Ltd']) }}</small>
     </footer>
 
-    <p>
-        Hello World how are you ?
-    </p>
+    <p>{{ __('Hello World how are you ?') }}</p>
 
 @endsection

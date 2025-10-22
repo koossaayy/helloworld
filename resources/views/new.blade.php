@@ -1,8 +1,6 @@
 @extends('layouts.admin')
 
-@section('title')
-    Nests &rarr; New Egg
-@endsection
+@section('title'){{ __('Nests &rarr; New Egg') }}@endsection
 
 @section('content-header')
     <h1>{{ __('New Egg') }}<small>{{ __('Create a new Egg to assign to servers.') }}</small></h1>
@@ -30,8 +28,7 @@
                                         <select name="nest_id" id="pNestId">
                                             @foreach ($nests as $nest)
                                                 <option value="{{ $nest->id }}"
-                                                    {{ old('nest_id') != $nest->id ?: 'selected' }}>{{ $nest->name }}
-                                                    &lt;{{ $nest->author }}&gt;</option>
+                                                    {{ old('nest_id') != $nest->id ?: 'selected' }}>{{ $nest->name }}{{ __('&lt;') }}{{ $nest->author }}{{ __('&gt;') }}</option>
                                             @endforeach
                                         </select>
                                         <p class="text-muted small">

@@ -28,8 +28,7 @@
     </p>
 
 
-    <p>
-        hello@gmail.com
+    <p>{{ __('hello') }}@gmail.com
     </p>
 
     <p>

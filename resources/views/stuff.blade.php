@@ -69,17 +69,17 @@
                 <tbody>
                     <tr class="border-t">
                         <td class="px-4 py-3">{{ __('Jane Doe') }}</td>
-                        <td class="px-4 py-3">jane@example.com</td>
+                        <td class="px-4 py-3">{{ __('jane') }}@example.com</td>
                         <td class="px-4 py-3">{{ __('Admin') }}</td>
                     </tr>
                     <tr class="border-t">
                         <td class="px-4 py-3">{{ __('John Smith') }}</td>
-                        <td class="px-4 py-3">john@example.com</td>
+                        <td class="px-4 py-3">{{ __('john') }}@example.com</td>
                         <td class="px-4 py-3">{{ __('User') }}</td>
                     </tr>
                     <tr class="border-t">
                         <td class="px-4 py-3">{{ __('Alex Roe') }}</td>
-                        <td class="px-4 py-3">alex@example.com</td>
+                        <td class="px-4 py-3">{{ __('alex') }}@example.com</td>
                         <td class="px-4 py-3">{{ __('Editor') }}</td>
                     </tr>
                 </tbody>
