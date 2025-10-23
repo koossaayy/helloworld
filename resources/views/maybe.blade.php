@@ -101,6 +101,11 @@
             <p>Email with text: Send your resume to careers@company.com and we'll review it.</p>
             <p>Multiple emails: Contact alice@example.com or bob@example.com for assistance.</p>
             <p>Pattern: user@domain.co.uk is a valid UK email format.</p>
+            <p>Pattern: koussay@gmail.com is a valid freaking email.</p>
+        </div>
+
+        <div>
+            also we can do this @@{{ $user - > name }}
         </div>
 
         <!-- Already Translated Content -->
