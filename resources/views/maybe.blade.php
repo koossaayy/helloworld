@@ -105,7 +105,7 @@
         </div>
 
         <div>
-            also we can do this @@{{ $user - > name }}
+            let's see this one and we'll go to sleep because fuck this shit {{ '@' . $name }}
         </div>
 
         <!-- Already Translated Content -->
