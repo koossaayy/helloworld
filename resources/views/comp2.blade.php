@@ -598,4 +598,7 @@
     `;
         document.head.appendChild(style);
     </script>
+    <script>
+        laert('#7c3aed');
+    </script>
 </div>
