@@ -112,6 +112,10 @@
             <p>{{ __('Welcome back!') }}</p>
             <p>{{ __('Your account is active') }}</p>
         </div>
+        <div class="existing">
+            <p>{{ __('Welcome back!') }}</p>
+            <p>{{ __('Your account is active') }}</p>
+        </div>
     </div>
 </body>
 
