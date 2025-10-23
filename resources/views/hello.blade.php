@@ -46,7 +46,6 @@
     <p>{{ __('Math: 2') }} < 5 &amp;&amp; 10>= 7</p>
 
     <!-- Translatable text with HTML inside -->
-    <p>{!! __('Click <a href=":url">{{ __('here') }}</a> to continue', ['url' => route('next')]) !!}</p>
 
     <!-- Existing translations — must remain untouched -->
     <p>{{ __('You have :count notifications', ['count' => 5]) }}</p>
