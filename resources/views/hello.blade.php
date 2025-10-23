@@ -107,4 +107,11 @@ Do NOT extract anything from {{ __('here') }}.
         Hello World how are you ?
     </p>
 
+
+    <p>
+        PLEASE WORK
+    </p>
+
+
+
 @endsection
