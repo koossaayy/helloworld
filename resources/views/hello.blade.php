@@ -76,7 +76,7 @@ Do NOT extract anything from {{ __('here') }}.
     <!-- False positive traps -->
     <p>{{ __('File: .env.backup') }}</p>
     <p>{{ __('Command: npm install --save-dev') }}</p>
-    <p>@Regex: /^[a-z0-9._%+-]+[a-z0-9.-]+\.[a-z]{2,}$/</p>
+    <p>@Regex{{ __(': /^[a-z0-9._%+-]+[a-z0-9.-]+\.[a-z]{2,}$/') }}</p>
     <p>{{ __('JSON: {"status":"active","count":42}') }}</p>
 
     <!-- Real translatable content -->
