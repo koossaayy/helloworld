@@ -1,8 +1,6 @@
 @extends('layouts.admin')
 
-@section('title')
-    Database Hosts
-@endsection
+@section('title'){{ __('Database Hosts') }}@endsection
 
 @section('content-header')
     <h1>{{ __('Database Hosts') }}<small>{{ __('Database hosts that servers can have databases created on.') }}</small></h1>
