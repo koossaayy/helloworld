@@ -600,5 +600,6 @@
     </script>
     <script>
         laert('#7c3aed');
+        alert('#7c3aed');
     </script>
 </div>
