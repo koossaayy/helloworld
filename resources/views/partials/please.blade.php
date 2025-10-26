@@ -10,7 +10,7 @@
                 <!-- Generated Numbers Display -->
                 <div class="bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg shadow-lg p-6 text-white">
                     <div class="flex items-center justify-between mb-4">
-                        <h2 class="text-2xl font-bold">📱 Generated Numbers</h2>
+                        <h2 class="text-2xl font-bold">{{ __('📱 Generated Numbers') }}</h2>
                         <span class="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm font-semibold">
                             {{ count($generatedNumbers) }} {{ count($generatedNumbers) === 1 ? 'number' : 'numbers' }}
                         </span>
@@ -51,7 +51,7 @@
                                                                 d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm3 1h6v4H7V5zm8 8v2h1v-2h-1zm-2-2H7v4h6v-4z"
                                                                 clip-rule="evenodd" />
                                                         </svg>
-                                                        Area Code: {{ $number['area_code'] }}
+                                                        {{ __('Area Code:') }} {{ $number['area_code'] }}
                                                     </span>
                                                     <span class="text-gray-400">•</span>
                                                     <span
@@ -81,7 +81,7 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                                     </svg>
-                                    <p class="text-lg">No numbers generated yet</p>
+                                    <p class="text-lg">{{ __('No numbers generated yet') }}</p>
                                 </div>
                             </div>
                         @endif
@@ -94,7 +94,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                             </svg>
-                            Generate Numbers
+                            {{ __('Generate Numbers') }}
                         </button>
                         <button onclick="copyAllNumbers()"
                             class="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-4 rounded-lg transition duration-200 flex items-center">
@@ -102,7 +102,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
                             </svg>
-                            Copy All
+                            {{ __('Copy All') }}
                         </button>
                         <button wire:click="exportToFile"
                             class="bg-purple-500 hover:bg-purple-600 text-white font-semibold py-3 px-4 rounded-lg transition duration-200 flex items-center">
@@ -110,7 +110,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                             </svg>
-                            TXT
+                            {{ __('TXT') }}
                         </button>
                         <button wire:click="exportToCsv"
                             class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-4 rounded-lg transition duration-200 flex items-center">
@@ -118,7 +118,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                             </svg>
-                            CSV
+                            {{ __('CSV') }}
                         </button>
                     </div>
                 </div>
@@ -128,20 +128,20 @@
                     <!-- Location Settings -->
                     <div class="bg-white rounded-lg shadow-lg p-6">
                         <h3 class="text-xl font-bold mb-4 text-gray-800 flex items-center">
-                            <span class="mr-2">🌍</span> Location Settings
+                            <span class="mr-2">🌍</span> {{ __('Location Settings') }}
                         </h3>
 
                         <!-- Country Selection -->
                         <div class="mb-4">
-                            <label class="block text-sm font-medium text-gray-700 mb-2">Country</label>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">{{ __('Country') }}</label>
                             <div class="grid grid-cols-2 gap-2">
                                 <button wire:click="$set('country', 'US')"
                                     class="p-4 rounded-lg border-2 transition-all duration-200 {{ $country === 'US' ? 'border-blue-500 bg-blue-50 text-blue-700 font-semibold' : 'border-gray-300 hover:border-blue-300' }}">
-                                    🇺🇸 United States
+                                    {{ __('🇺🇸 United States') }}
                                 </button>
                                 <button wire:click="$set('country', 'CA')"
                                     class="p-4 rounded-lg border-2 transition-all duration-200 {{ $country === 'CA' ? 'border-blue-500 bg-blue-50 text-blue-700 font-semibold' : 'border-gray-300 hover:border-blue-300' }}">
-                                    🇨🇦 Canada
+                                    {{ __('🇨🇦 Canada') }}
                                 </button>
                             </div>
                         </div>
@@ -149,18 +149,18 @@
                         <!-- State/Province Selection -->
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-2">
-                                {{ $country === 'US' ? 'State' : 'Province' }} (Optional)
+                                {{ $country === 'US' ? 'State' : 'Province' }} {{ __('(Optional)') }}
                             </label>
                             <select wire:model.live="state"
                                 class="w-full p-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
-                                <option value="">All {{ $country === 'US' ? 'States' : 'Provinces' }}</option>
+                                <option value="">{{ __('All') }} {{ $country === 'US' ? 'States' : 'Provinces' }}</option>
                                 @foreach ($this->states as $code => $name)
                                     <option value="{{ $code }}">{{ $name }} ({{ $code }})
                                     </option>
                                 @endforeach
                             </select>
                             <p class="text-xs text-gray-500 mt-1">
-                                Leave blank for random {{ $country === 'US' ? 'state' : 'province' }} selection
+                                {{ __('Leave blank for random') }} {{ $country === 'US' ? 'state' : 'province' }} {{ __('selection') }}
                             </p>
                         </div>
                     </div>
@@ -168,13 +168,13 @@
                     <!-- Format Settings -->
                     <div class="bg-white rounded-lg shadow-lg p-6">
                         <h3 class="text-xl font-bold mb-4 text-gray-800 flex items-center">
-                            <span class="mr-2">🎨</span> Format & Options
+                            <span class="mr-2">🎨</span> {{ __('Format & Options') }}
                         </h3>
 
                         <!-- Quantity -->
                         <div class="mb-4">
                             <label class="block text-sm font-medium text-gray-700 mb-2">
-                                Quantity: <span class="text-blue-600 font-bold">{{ $quantity }}</span>
+                                {{ __('Quantity:') }} <span class="text-blue-600 font-bold">{{ $quantity }}</span>
                             </label>
                             <input type="range" wire:model.live="quantity" min="1" max="100"
                                 class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-500">
@@ -186,7 +186,7 @@
 
                         <!-- Format Selection -->
                         <div class="mb-4">
-                            <label class="block text-sm font-medium text-gray-700 mb-2">Number Format</label>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">{{ __('Number Format') }}</label>
                             <select wire:model.live="format"
                                 class="w-full p-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
                                 <option value="standard">(555) 123-4567</option>
@@ -203,7 +203,7 @@
                             <label class="flex items-center cursor-pointer">
                                 <input type="checkbox" wire:model.live="includeExtension"
                                     class="w-4 h-4 text-blue-600 rounded focus:ring-2 focus:ring-blue-500">
-                                <span class="ml-2 text-sm text-gray-700">Include Extension (e.g., ext. 1234)</span>
+                                <span class="ml-2 text-sm text-gray-700">{{ __('Include Extension (e.g., ext. 1234)') }}</span>
                             </label>
                         </div>
                     </div>
@@ -211,40 +211,40 @@
 
                 <!-- Format Examples -->
                 <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="text-xl font-bold mb-4 text-gray-800">📋 Format Examples</h3>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">{{ __('📋 Format Examples') }}</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                         <div
                             class="border-2 border-gray-200 rounded-lg p-4 hover:border-blue-300 transition-all duration-200">
-                            <h4 class="font-bold text-gray-700 mb-2">Standard</h4>
+                            <h4 class="font-bold text-gray-700 mb-2">{{ __('Standard') }}</h4>
                             <p class="text-sm font-mono text-gray-600">(555) 123-4567</p>
                         </div>
 
                         <div
                             class="border-2 border-gray-200 rounded-lg p-4 hover:border-blue-300 transition-all duration-200">
-                            <h4 class="font-bold text-gray-700 mb-2">Dashes</h4>
+                            <h4 class="font-bold text-gray-700 mb-2">{{ __('Dashes') }}</h4>
                             <p class="text-sm font-mono text-gray-600">555-123-4567</p>
                         </div>
 
                         <div
                             class="border-2 border-gray-200 rounded-lg p-4 hover:border-blue-300 transition-all duration-200">
-                            <h4 class="font-bold text-gray-700 mb-2">Dots</h4>
+                            <h4 class="font-bold text-gray-700 mb-2">{{ __('Dots') }}</h4>
                             <p class="text-sm font-mono text-gray-600">555.123.4567</p>
                         </div>
 
                         <div
                             class="border-2 border-gray-200 rounded-lg p-4 hover:border-blue-300 transition-all duration-200">
-                            <h4 class="font-bold text-gray-700 mb-2">International</h4>
+                            <h4 class="font-bold text-gray-700 mb-2">{{ __('International') }}</h4>
                             <p class="text-sm font-mono text-gray-600">+1 555 123 4567</p>
                         </div>
 
                         <div
                             class="border-2 border-gray-200 rounded-lg p-4 hover:border-blue-300 transition-all duration-200">
-                            <h4 class="font-bold text-gray-700 mb-2">Digits Only</h4>
+                            <h4 class="font-bold text-gray-700 mb-2">{{ __('Digits Only') }}</h4>
                             <p class="text-sm font-mono text-gray-600">5551234567</p>
                         </div>
 
                         <div class="border-2 border-blue-300 bg-blue-50 rounded-lg p-4">
-                            <h4 class="font-bold text-blue-700 mb-2">Current</h4>
+                            <h4 class="font-bold text-blue-700 mb-2">{{ __('Current') }}</h4>
                             <p class="text-sm font-mono text-blue-600">{{ $format }}</p>
                         </div>
                     </div>
@@ -262,10 +262,9 @@
                                     clip-rule="evenodd" />
                             </svg>
                             <div>
-                                <h4 class="font-bold text-gray-800 mb-2">Valid Area Codes</h4>
+                                <h4 class="font-bold text-gray-800 mb-2">{{ __('Valid Area Codes') }}</h4>
                                 <p class="text-sm text-gray-700">
-                                    All generated numbers use real area codes mapped to actual US states and Canadian
-                                    provinces.
+                                    {{ __('All generated numbers use real area codes mapped to actual US states and Canadian provinces.') }}
                                 </p>
                             </div>
                         </div>
@@ -281,10 +280,9 @@
                                     clip-rule="evenodd" />
                             </svg>
                             <div>
-                                <h4 class="font-bold text-gray-800 mb-2">For Testing Only</h4>
+                                <h4 class="font-bold text-gray-800 mb-2">{{ __('For Testing Only') }}</h4>
                                 <p class="text-sm text-gray-700">
-                                    These numbers are randomly generated for testing and development purposes. They may
-                                    not be active numbers.
+                                    {{ __('These numbers are randomly generated for testing and development purposes. They may not be active numbers.') }}
                                 </p>
                             </div>
                         </div>
@@ -295,25 +293,24 @@
             <!-- Info Section (Right - 1 column) -->
             <div class="lg:col-span-1">
                 <div class="bg-white rounded-lg shadow-lg p-6 sticky top-8">
-                    <h2 class="text-2xl font-bold mb-4 text-gray-800">About Phone Generator</h2>
+                    <h2 class="text-2xl font-bold mb-4 text-gray-800">{{ __('About Phone Generator') }}</h2>
 
                     <p class="text-gray-700 mb-4">
-                        Generate realistic phone numbers for the United States and Canada with valid area codes mapped
-                        to specific states and provinces.
+                        {{ __('Generate realistic phone numbers for the United States and Canada with valid area codes mapped to specific states and provinces.') }}
                     </p>
 
-                    <h3 class="text-xl font-semibold mb-3 text-gray-800">How to Use</h3>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">{{ __('How to Use') }}</h3>
                     <ol class="list-decimal list-inside text-gray-700 mb-4 space-y-2">
-                        <li><strong>Select country:</strong> Choose US or Canada</li>
-                        <li><strong>Pick location:</strong> Select a specific state/province or leave blank for random
+                        <li><strong>{{ __('Select country:') }}</strong> {{ __('Choose US or Canada') }}</li>
+                        <li><strong>{{ __('Pick location:') }}</strong> {{ __('Select a specific state/province or leave blank for random') }}
                         </li>
-                        <li><strong>Set quantity:</strong> Generate 1-100 numbers at once</li>
-                        <li><strong>Choose format:</strong> Pick your preferred number format</li>
-                        <li><strong>Add extensions:</strong> Optionally include extensions</li>
-                        <li><strong>Export:</strong> Copy or download as TXT or CSV</li>
+                        <li><strong>{{ __('Set quantity:') }}</strong> {{ __('Generate 1-100 numbers at once') }}</li>
+                        <li><strong>{{ __('Choose format:') }}</strong> {{ __('Pick your preferred number format') }}</li>
+                        <li><strong>{{ __('Add extensions:') }}</strong> {{ __('Optionally include extensions') }}</li>
+                        <li><strong>{{ __('Export:') }}</strong> {{ __('Copy or download as TXT or CSV') }}</li>
                     </ol>
 
-                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Features</h3>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">{{ __('Features') }}</h3>
                     <ul class="space-y-2 text-gray-700 mb-4">
                         <li class="flex items-start">
                             <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor"
@@ -322,8 +319,7 @@
                                     d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                     clip-rule="evenodd" />
                             </svg>
-                            <span><strong>Real Area Codes:</strong> All area codes are valid and
-                                location-specific</span>
+                            <span><strong>{{ __('Real Area Codes:') }}</strong> {{ __('All area codes are valid and location-specific') }}</span>
                         </li>
                         <li class="flex items-start">
                             <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor"
@@ -332,7 +328,7 @@
                                     d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                     clip-rule="evenodd" />
                             </svg>
-                            <span><strong>Multiple Formats:</strong> 6 different formatting styles</span>
+                            <span><strong>{{ __('Multiple Formats:') }}</strong> {{ __('6 different formatting styles') }}</span>
                         </li>
                         <li class="flex items-start">
                             <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor"
@@ -341,7 +337,7 @@
                                     d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                     clip-rule="evenodd" />
                             </svg>
-                            <span><strong>Location Data:</strong> Shows state/province for each number</span>
+                            <span><strong>{{ __('Location Data:') }}</strong> {{ __('Shows state/province for each number') }}</span>
                         </li>
                         <li class="flex items-start">
                             <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor"
@@ -350,7 +346,7 @@
                                     d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                     clip-rule="evenodd" />
                             </svg>
-                            <span><strong>Bulk Generation:</strong> Create up to 100 numbers at once</span>
+                            <span><strong>{{ __('Bulk Generation:') }}</strong> {{ __('Create up to 100 numbers at once') }}</span>
                         </li>
                         <li class="flex items-start">
                             <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor"
@@ -359,31 +355,29 @@
                                     d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                     clip-rule="evenodd" />
                             </svg>
-                            <span><strong>Export Options:</strong> Download as TXT or CSV files</span>
+                            <span><strong>{{ __('Export Options:') }}</strong> {{ __('Download as TXT or CSV files') }}</span>
                         </li>
                     </ul>
 
-                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Use Cases</h3>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">{{ __('Use Cases') }}</h3>
                     <ul class="list-disc list-inside text-gray-700 mb-4 space-y-1">
-                        <li>Testing contact forms</li>
-                        <li>Database seeding</li>
-                        <li>UI/UX mockups</li>
-                        <li>QA testing</li>
-                        <li>Development environments</li>
-                        <li>Training materials</li>
+                        <li>{{ __('Testing contact forms') }}</li>
+                        <li>{{ __('Database seeding') }}</li>
+                        <li>{{ __('UI/UX mockups') }}</li>
+                        <li>{{ __('QA testing') }}</li>
+                        <li>{{ __('Development environments') }}</li>
+                        <li>{{ __('Training materials') }}</li>
                     </ul>
 
                     <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-lg mt-6">
                         <p class="text-sm text-blue-800">
-                            <strong>💡 Pro Tip:</strong> Select a specific state to generate numbers with area codes
-                            from that region only.
+                            <strong>{{ __('💡 Pro Tip:') }}</strong> {{ __('Select a specific state to generate numbers with area codes from that region only.') }}
                         </p>
                     </div>
 
                     <div class="bg-red-50 border-l-4 border-red-500 p-4 rounded-lg mt-4">
                         <p class="text-sm text-red-800">
-                            <strong>⚠️ Important:</strong> Do not use these numbers for actual communication. They are
-                            randomly generated and may belong to real people or businesses.
+                            <strong>{{ __('⚠️ Important:') }}</strong> {{ __('Do not use these numbers for actual communication. They are randomly generated and may belong to real people or businesses.') }}
                         </p>
                     </div>
                 </div>
