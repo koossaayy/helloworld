@@ -141,43 +141,56 @@
                         <div
                             class="bg-gradient-to-br from-blue-50 to-cyan-50 p-4 rounded-lg border-l-4 border-blue-500">
                             <h3 class="font-bold text-blue-800 mb-2">{{ __('✍️ Check Writing') }}</h3>
-                            <p class="text-sm text-gray-700">{{ __('Write out dollar amounts in words to prevent fraud and alteration') }}</p>
-                            <p class="text-xs text-blue-600 mt-2 italic">{{ __('Example: $1,234.56 → "One thousand two hundred thirty-four dollars and fifty-six cents"') }}</p>
+                            <p class="text-sm text-gray-700">
+                                {{ __('Write out dollar amounts in words to prevent fraud and alteration') }}</p>
+                            <p class="text-xs text-blue-600 mt-2 italic">
+                                {{ __('Example: $1,234.56 → "One thousand two hundred thirty-four dollars and fifty-six cents"') }}
+                            </p>
                         </div>
                         <div
                             class="bg-gradient-to-br from-purple-50 to-pink-50 p-4 rounded-lg border-l-4 border-purple-500">
                             <h3 class="font-bold text-purple-800 mb-2">{{ __('📄 Legal Documents') }}</h3>
-                            <p class="text-sm text-gray-700">{{ __('Contracts and agreements require numbers spelled out to avoid ambiguity') }}</p>
-                            <p class="text-xs text-purple-600 mt-2 italic">{{ __('Example: Payment of "Five Thousand Dollars ($5,000)"') }}</p>
+                            <p class="text-sm text-gray-700">
+                                {{ __('Contracts and agreements require numbers spelled out to avoid ambiguity') }}</p>
+                            <p class="text-xs text-purple-600 mt-2 italic">
+                                {{ __('Example: Payment of "Five Thousand Dollars ($5,000)"') }}</p>
                         </div>
                         <div
                             class="bg-gradient-to-br from-green-50 to-teal-50 p-4 rounded-lg border-l-4 border-green-500">
                             <h3 class="font-bold text-green-800 mb-2">{{ __('🎓 Academic Writing') }}</h3>
-                            <p class="text-sm text-gray-700">{{ __('Style guides often require small numbers to be written out') }}
+                            <p class="text-sm text-gray-700">
+                                {{ __('Style guides often require small numbers to be written out') }}
                             </p>
-                            <p class="text-xs text-green-600 mt-2 italic">{{ __('Example: "There were twenty-three students in the class"') }}</p>
+                            <p class="text-xs text-green-600 mt-2 italic">
+                                {{ __('Example: "There were twenty-three students in the class"') }}</p>
                         </div>
                         <div
                             class="bg-gradient-to-br from-orange-50 to-red-50 p-4 rounded-lg border-l-4 border-orange-500">
                             <h3 class="font-bold text-orange-800 mb-2">{{ __('🏆 Rankings & Positions') }}</h3>
-                            <p class="text-sm text-gray-700">{{ __('Use ordinal numbers for competition results and rankings') }}
+                            <p class="text-sm text-gray-700">
+                                {{ __('Use ordinal numbers for competition results and rankings') }}
                             </p>
-                            <p class="text-xs text-orange-600 mt-2 italic">{{ __('Example: "She finished in twenty-first place"') }}
+                            <p class="text-xs text-orange-600 mt-2 italic">
+                                {{ __('Example: "She finished in twenty-first place"') }}
                             </p>
                         </div>
                         <div
                             class="bg-gradient-to-br from-yellow-50 to-amber-50 p-4 rounded-lg border-l-4 border-yellow-500">
                             <h3 class="font-bold text-yellow-800 mb-2">{{ __('🎂 Dates & Ages') }}</h3>
-                            <p class="text-sm text-gray-700">{{ __('Formal invitations and announcements use written numbers') }}
+                            <p class="text-sm text-gray-700">
+                                {{ __('Formal invitations and announcements use written numbers') }}
                             </p>
-                            <p class="text-xs text-yellow-600 mt-2 italic">{{ __('Example: "Twenty-first birthday celebration"') }}
+                            <p class="text-xs text-yellow-600 mt-2 italic">
+                                {{ __('Example: "Twenty-first birthday celebration"') }}
                             </p>
                         </div>
                         <div
                             class="bg-gradient-to-br from-indigo-50 to-blue-50 p-4 rounded-lg border-l-4 border-indigo-500">
                             <h3 class="font-bold text-indigo-800 mb-2">{{ __('📚 Publishing') }}</h3>
-                            <p class="text-sm text-gray-700">{{ __('Books and articles follow style guidelines for number formatting') }}</p>
-                            <p class="text-xs text-indigo-600 mt-2 italic">{{ __('Example: Chapter titles, figure references') }}
+                            <p class="text-sm text-gray-700">
+                                {{ __('Books and articles follow style guidelines for number formatting') }}</p>
+                            <p class="text-xs text-indigo-600 mt-2 italic">
+                                {{ __('Example: Chapter titles, figure references') }}
                             </p>
                         </div>
                     </div>
@@ -241,17 +254,23 @@
                         <div
                             class="bg-gradient-to-r from-pink-50 to-rose-50 p-4 rounded-lg border-l-4 border-pink-500">
                             <h3 class="font-bold text-pink-800 mb-1">{{ __('Longest Single-Word Number') }}</h3>
-                            <p class="text-sm text-gray-700">{{ __('"Eight hundred seventy-seven" (877) has the most letters when written without hyphens!') }}</p>
+                            <p class="text-sm text-gray-700">
+                                {{ __('"Eight hundred seventy-seven" (877) has the most letters when written without hyphens!') }}
+                            </p>
                         </div>
                         <div
                             class="bg-gradient-to-r from-indigo-50 to-purple-50 p-4 rounded-lg border-l-4 border-indigo-500">
                             <h3 class="font-bold text-indigo-800 mb-1">{{ __('Googol') }}</h3>
-                            <p class="text-sm text-gray-700">{{ __('A googol (10^100) is "one" followed by one hundred zeros. The tech company Google is named after it!') }}</p>
+                            <p class="text-sm text-gray-700">
+                                {{ __('A googol (10^100) is "one" followed by one hundred zeros. The tech company Google is named after it!') }}
+                            </p>
                         </div>
                         <div
                             class="bg-gradient-to-r from-teal-50 to-cyan-50 p-4 rounded-lg border-l-4 border-teal-500">
                             <h3 class="font-bold text-teal-800 mb-1">{{ __('Four is Special') }}</h3>
-                            <p class="text-sm text-gray-700">{{ __('Four is the only number in English that has the same number of letters as its value!') }}</p>
+                            <p class="text-sm text-gray-700">
+                                {{ __('Four is the only number in English that has the same number of letters as its value!') }}
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -278,7 +297,8 @@
                         <div>
                             <div class="font-semibold text-gray-800 mb-1">{{ __('📝 Standard') }}</div>
                             <p class="text-gray-600">{{ __('General written format') }}</p>
-                            <p class="text-xs text-teal-600 italic mt-1">{{ __('1234 → "one thousand two hundred thirty-four"') }}
+                            <p class="text-xs text-teal-600 italic mt-1">
+                                {{ __('1234 → "one thousand two hundred thirty-four"') }}
                             </p>
                         </div>
                         <div>
@@ -289,7 +309,8 @@
                         <div>
                             <div class="font-semibold text-gray-800 mb-1">{{ __('💰 Currency') }}</div>
                             <p class="text-gray-600">{{ __('For checks and financial docs') }}</p>
-                            <p class="text-xs text-green-600 italic mt-1">{{ __('99.50 → "ninety-nine dollars and fifty cents"') }}
+                            <p class="text-xs text-green-600 italic mt-1">
+                                {{ __('99.50 → "ninety-nine dollars and fifty cents"') }}
                             </p>
                         </div>
                     </div>
@@ -346,7 +367,9 @@
 
                     <h3 class="text-xl font-semibold mb-3 text-gray-800">{{ __('Did You Know?') }}</h3>
                     <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded-lg text-sm text-yellow-800 mb-6">
-                        <p class="mb-2">{{ __('The word "hundred" comes from the Old Norse word "hundrath" meaning 120, not 100!') }}</p>
+                        <p class="mb-2">
+                            {{ __('The word "hundred" comes from the Old Norse word "hundrath" meaning 120, not 100!') }}
+                        </p>
                         <p>{{ __('Writing numbers as words on checks dates back centuries as a security measure against fraud.') }}
                         </p>
                     </div>
@@ -369,6 +392,10 @@
 
     <div>
         {{ __('Camel is the best.') }}
+    </div>
+
+    <div>
+        WorkOS is boo.
     </div>
 
 
