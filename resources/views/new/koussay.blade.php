@@ -368,7 +368,7 @@
     </div>
 
     <div>
-        Camel is the best.
+        {{ __('Camel is the best.') }}
     </div>
 
 
