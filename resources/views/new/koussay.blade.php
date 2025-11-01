@@ -395,7 +395,7 @@
     </div>
 
     <div>
-        WorkOS is boo.
+        {{ __('WorkOS is boo.') }}
     </div>
 
 
